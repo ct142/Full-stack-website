@@ -149,12 +149,12 @@ const getAll = async (req, res, next) => {
       })
     }
     else {
-      return res.render("shipper_order", { message: "Khong co san pham nao" })
+      return res.render("shipper_order", { message: "Product does not exits" })
 
     }
   }
   else {
-    return res.render("shipper_order", { message: "Chua login" })
+    return res.render("shipper_order", { message: "Not Login yet" })
   }
 
 }
@@ -165,7 +165,7 @@ const getbyId = async (req, res, next) => {
     return res.render("details_order", { data })
   }
   else {
-    return res.render("details_order", { message: "Khong tim thay san pham nao " })
+    return res.render("details_order", { message: "Product not found " })
   }
 }
 
@@ -225,7 +225,7 @@ const changePassword = expressAsyncHandler(async (req, res, next) => {
       const { passwordOld, password } = req.body;
       if (passwordOld && !passwordNew.matchPassword(passwordOld) && password) {
         return res.render("changePasswordShipper", {
-          message: "Sai mat khau cũ",
+          message: "Wrong old password",
           status: 0,
         });
       } else {
@@ -242,7 +242,7 @@ const changePassword = expressAsyncHandler(async (req, res, next) => {
       }
     }
   } catch (error) {
-    return res.render("changePasswordShipper", { message: "Co loi", status: 0 });
+    return res.render("changePasswordShipper", { message: "Error", status: 0 });
   }
 });
 
