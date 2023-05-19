@@ -71,7 +71,7 @@ const listProduct = async (req, res, next) => {
   if (products) {
     return res.render("list_product", { products, data });
   } else {
-    return res.render("list_product", { message: "Khong co san pham nao" });
+    return res.render("list_product", { message: "Product does not exists" });
   }
 };
 
@@ -90,7 +90,7 @@ const getDetailsProduct = async (req, res, next) => {
     return res.render("details_product", { product });
   } else {
     return res.render("details_product", {
-      message: "Khong tim thay san pham",
+      message: "Product not found",
     });
   }
 };
@@ -133,9 +133,9 @@ const deleteProduct = async (req, res, next) => {
   try {
     const productOld = await Product.findByIdAndDelete(req.body.id);
     if (productOld) {
-      return res.json({ message: "thanh cong", ok: true });
+      return res.json({ message: "Success", ok: true });
     } else {
-      return res.json({ message: "KHong tim thay id de xoa", ok: false });
+      return res.json({ message: "Id not found to delete", ok: false });
     }
   } catch (error) {
     console.log(error);
@@ -180,7 +180,7 @@ const getDetailsProductApi = async (req, res, next) => {
     return res.json({ product });
   } else {
     return res.json({
-      message: "Khong tim thay san pham",
+      message: "Product not found",
     });
   }
 };

@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         localStorage.setItem('cart', JSON.stringify(cartItems));
 
-        console.log('Thêm sản phẩm vào giỏ hàng:');
+        console.log('Add to Cart:');
         console.log(product);
 
         // Update the cart displayed on the page

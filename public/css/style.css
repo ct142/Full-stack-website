@@ -419,7 +419,7 @@ h2 {
   display: flex;
   align-items: center;
   height: 200px;
-  /* Chiều cao cố định */
+
 }
 
 .product-img {
@@ -571,7 +571,7 @@ td {
   background-color: #f2f2f2;
 }
 
-/* Thiết lập kiểu cho nút */
+
 .cart button {
   background-color: #DE4F11;
   color: white;
@@ -704,14 +704,14 @@ td {
   color: #f2f2f2;
 }
 
-/* Thiết lập kiểu cho phần tổng tiền */
+
 .total {
   text-align: right;
   font-weight: bold;
   padding: 8px;
 }
 
-/* Thiết lập kiểu cho phần tiêu đề */
+
 .header {
   background-color: #333;
   color: white;
@@ -912,7 +912,7 @@ footer p {
 
   .category-text {
     margin-right: 5px;
-    /* Căn lề phải để tạo khoảng cách giữa chữ và biểu tượng */
+    
   }
 
   #carouselExampleCaptions {
@@ -994,12 +994,12 @@ footer p {
 
   .category-text {
     margin-right: 5px;
-    /* Căn lề phải để tạo khoảng cách giữa chữ và biểu tượng */
+
     font-size: 18px;
     font-weight: 600;
   }
 
-  /* Thiết lập kiểu hiển thị cho label */
+  
   .checkbtn {
     display: flex;
     justify-content: center;
@@ -1019,7 +1019,7 @@ footer p {
 
   }
 
-  /* Chỉnh sửa hiển thị icon */
+  
 
   .checkbtn i {
     font-size: 24px;
@@ -1328,7 +1328,7 @@ flex-direction: column;
   }
 
 
-  /* Chỉnh sửa hiển thị icon */
+  
 
   .checkbtn i {
     font-size: 24px;
@@ -1356,7 +1356,7 @@ flex-direction: column;
 
   .category-text {
     margin-right: 5px;
-    /* Căn lề phải để tạo khoảng cách giữa chữ và biểu tượng */
+    
     font-weight: 550;
   }
 

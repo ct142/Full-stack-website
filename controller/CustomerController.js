@@ -171,7 +171,7 @@ const changePassword = expressAsyncHandler(async (req, res, next) => {
       const { passwordOld, password } = req.body;
       if (passwordOld && !passwordNew.matchPassword(passwordOld) && password) {
         return res.render("changePasswordCustomer", {
-          message: "Sai mat khau cũ",
+          message: "Wrong old password",
           status: 0,
         });
       } else {
@@ -188,7 +188,7 @@ const changePassword = expressAsyncHandler(async (req, res, next) => {
       }
     }
   } catch (error) {
-    return res.render("changePasswordCustomer", { message: "Co loi",status:0 });
+    return res.render("changePasswordCustomer", { message: "Error",status:0 });
   }
 })
 module.exports = { register, Login, getHome, Logout, updateProfile, getAddress, changePassword };

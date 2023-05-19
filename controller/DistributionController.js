@@ -19,11 +19,11 @@ const createDistribution = async (req, res, next) => {
         const { name, address } = req.body;
         const checkName = await DistributionHub.findOne({ name })
         if (checkName) {
-            return res.status(400).json({ message: "Name đã tồn tại" });
+            return res.status(400).json({ message: "Name is already taken" });
         }
         const checkAddress = await DistributionHub.findOne({ address })
         if (checkAddress) {
-            return res.status(400).json({ message: "Address đã tồn tại" });
+            return res.status(400).json({ message: "Address is already taken" });
         }
         const newDistribution = new DistributionHub({
             name,
@@ -31,7 +31,7 @@ const createDistribution = async (req, res, next) => {
         });
         await newDistribution.save();
 
-        return res.status(200).json({ message: "Thanh cong", newDistribution })
+        return res.status(200).json({ message: "Success", newDistribution })
     } catch (error) {
         next(error)
     }

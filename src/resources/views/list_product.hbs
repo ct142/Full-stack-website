@@ -106,14 +106,14 @@
       })
         .then(response => {
           if (response.ok) {
-            alert("Sản phẩm đã được xóa thành công!");
+            alert("Product delete successfully!");
             location.reload();
           } else {
-            alert("Đã xảy ra lỗi khi xóa sản phẩm!");
+            alert("An error occurred while deleting product!");
           }
         })
         .catch(error => {
-          alert("Đã xảy ra lỗi khi gọi API xóa sản phẩm:", error);
+          alert("An error occurred while calling the product removal API:", error);
         });
     }
   </script>

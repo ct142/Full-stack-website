@@ -156,13 +156,13 @@ const changePassword = expressAsyncHandler(async (req, res, next) => {
       const tempt = await passwordNew.matchPassword(passwordOld)
       if (!tempt) {
         return res.render("changePasswordVendor", {
-          message: "Sai mat khau cũ",
+          message: "Wrong old password",
           status: 1,
         });
       } else {
         passwordNew.password = password;
         await passwordNew.save();
-        // return res.render("changePasswordVendor", { message: "Thanh cong", status: 1 });
+        // return res.render("changePasswordVendor", { message: "Success", status: 1 });
         return res.render(
           "changePasswordVendor",
           {
@@ -174,7 +174,7 @@ const changePassword = expressAsyncHandler(async (req, res, next) => {
       }
     }
   } catch (error) {
-    return res.render("changePasswordVendor", { message: "Co loi", status: 0 });
+    return res.render("changePasswordVendor", { message: "Error", status: 0 });
   }
 });
 module.exports = {

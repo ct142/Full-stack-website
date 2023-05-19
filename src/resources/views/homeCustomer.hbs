@@ -543,10 +543,10 @@
   </div>
   <script>
     function submitSearch(event) {
-      event.preventDefault(); // Ngăn chặn hành vi mặc định của form submission
+      event.preventDefault();
 
-      const form = event.target; // Lấy form hiện tại
-      const formData = new FormData(form); // Tạo đối tượng FormData để lấy giá trị của form
+      const form = event.target;
+      const formData = new FormData(form); 
 
       fetch('/products/search', {
         method: 'POST',
@@ -554,7 +554,7 @@
       })
         .then(response => response.text())
         .then(data => {
-          // Cập nhật lại nội dung div search-results với kết quả tìm kiếm
+          
           const container = document.getElementById('search-results');
           container.innerHTML = data;
         })

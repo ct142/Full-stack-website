@@ -161,7 +161,7 @@
 
     <script>
         function handleClick(status,id) {
-            // Your code to be executed when the button is clicked
+            // the code to be executed when the button is clicked
             {{!-- alert("Button clicked!"); --}}
             axios.post("/shipper/api/updateStatus", { status: status,id:id })
                 .then((response) => {
